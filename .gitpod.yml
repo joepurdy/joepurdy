@@ -2,3 +2,4 @@
 vscode:
   extensions:
     - "github.copilot"
+    - "ms-python.python"
