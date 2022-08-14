@@ -1,4 +1,4 @@
-image: Dockerfile
+image: ghcr.io/joepurdy/joepurdy:main
 
 vscode:
   extensions:
