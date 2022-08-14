@@ -10,8 +10,8 @@ RUN rm -rf /home/gitpod/go && \
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 RUN echo -e "\n. $HOME/.asdf/asdf.sh" >> ~/.bashrc
 RUN echo -e "\n. $HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
-RUN asdf plugin-add golang
+RUN $HOME/.asdf/bin/asdf plugin-add golang
 
 # Install Go 1.18.x
-RUN asdf install golang 1.18.5
-RUN asdf global golang 1.18.5
+RUN $HOME/.asdf/bin/asdf install golang 1.18.5
+RUN $HOME/.asdf/bin/asdf global golang 1.18.5
