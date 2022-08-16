@@ -8,8 +8,10 @@ RUN rm -rf /home/gitpod/go && \
 
 # Install asdf and asdf plugins
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
-RUN echo -e "\n. $HOME/.asdf/asdf.sh" >> ~/.bashrc
-RUN echo -e "\n. $HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
+RUN echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc
+RUN echo ". $HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
+RUN echo "unset GOPATH GOROOT" >> ~/.bashrc
+
 RUN $HOME/.asdf/bin/asdf plugin-add golang
 
 # Install Go 1.18.x
